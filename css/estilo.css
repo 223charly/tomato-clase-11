@@ -1,0 +1,113 @@
+/* Reser */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* propiedades d ela caja */ 
+
+.caja{
+    height: 600px;
+    display: grid;
+    /* columnas */
+    /*grid-template-columns: repeat(2, 200px);*/
+    grid-template-columns: repeat(2, 1fr);
+    /*column-gap: 10px;**/
+    gap: 50px 30px;
+
+    /* filas*/
+    grid-template-rows: 50% 50%;
+}
+
+
+/* propiedades de los hijos*/
+
+.hijo-uno{
+    background-color: tomato;
+}
+
+.hijo-dos{
+    background-color: rgb(55, 7, 212);
+}
+
+.hijo-tres{
+    background-color: rgb(214, 232, 22);
+}
+
+.hijo-cuatro{
+    background-color: rgb(229, 19, 85);
+}
+
+/* codigo ejemplo */
+
+.contenedor{
+    height: 600px;
+    background-color: tomato;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    /* la justificacion */
+
+justify-items: center;
+align-items: start;
+
+}
+
+/* propiedades al hijo - alinearlos individualmente */
+
+.item-1 {
+    background-color: blueviolet;
+    justify-self: end;
+    align-self: center;
+}
+
+.item-4 {
+    background-color: rgb(92, 205, 17);
+    justify-self: start;
+    align-self: center;
+}
+
+/* estilos ejemplo dos */
+
+.contain{
+    height:100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.5fr 2fr 1fr 0.5fr ;
+    grid-template-areas: 
+        "header header header"
+        "main main section"
+        "main main aside"
+        "footer footer footer"; 
+        gap: 10px;
+
+   
+}
+
+header {
+    background-color: tomato;
+    grid-area: header;
+}
+
+main{
+    background-color: blue;
+    grid-area: main;
+}
+
+section{
+    background-color: aqua;
+    grid-area: section;
+}
+
+aside{
+    background-color: darkgoldenrod;
+    grid-area: aside;
+}
+
+footer{
+    background-color: green;
+    grid-area: footer;
+}
